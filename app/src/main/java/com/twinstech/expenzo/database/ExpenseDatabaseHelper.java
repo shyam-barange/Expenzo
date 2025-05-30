@@ -47,7 +47,8 @@ public class ExpenseDatabaseHelper extends SQLiteOpenHelper {
 
     if(isCursorPopulated(cursor)){
       do {
-        String type = cursor.getString(cursor.getColumnIndex(ExpenseTypeTable.TYPE));
+      int typeIndex = cursor.getColumnIndex(ExpenseTypeTable.TYPE);
+        String type = typeIndex != -1 ? cursor.getString(typeIndex) : null;
         expenseTypes.add(type);
       } while(cursor.moveToNext());
     }
@@ -121,11 +122,17 @@ public class ExpenseDatabaseHelper extends SQLiteOpenHelper {
     List<Expense> expenses = new ArrayList<>();
     if(isCursorPopulated(cursor)){
       do {
-        String type = cursor.getString(cursor.getColumnIndex(ExpenseTable.TYPE));
-        String amount = cursor.getString(cursor.getColumnIndex(ExpenseTable.AMOUNT));
-        String date = cursor.getString(cursor.getColumnIndex(ExpenseTable.DATE));
-        String id = cursor.getString(cursor.getColumnIndex(ExpenseTable._ID));
+       int typeIndex = cursor.getColumnIndex(ExpenseTable.TYPE);
+       String type = typeIndex != -1 ? cursor.getString(typeIndex) : null;
 
+       int amountIndex = cursor.getColumnIndex(ExpenseTable.AMOUNT);
+       String amount = amountIndex != -1 ? cursor.getString(amountIndex) : null;
+
+       int dateIndex = cursor.getColumnIndex(ExpenseTable.DATE);
+       String date = dateIndex != -1 ? cursor.getString(dateIndex) : null;
+
+       int idIndex = cursor.getColumnIndex(ExpenseTable._ID);
+       String id = idIndex != -1 ? cursor.getString(idIndex) : null;
         Expense expense = id == null ? new Expense(parseLong(amount), type, date) : new Expense(parseInt(id), parseLong(amount), type, date);
         expenses.add(expense);
       } while(cursor.moveToNext());
