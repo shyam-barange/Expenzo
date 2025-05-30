@@ -10,7 +10,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:gravity="center"
             android:text="@string/current_months_expenses"
             android:textColor="@color/white"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
         <androidx.cardview.widget.CardView
@@ -43,7 +43,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:textColor="@color/application_background"
-                    android:textSize="25dp" />
+                    android:textSize="25sp" />
 
                 <TextView
                     android:layout_width="match_parent"
