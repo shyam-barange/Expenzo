@@ -11,8 +11,19 @@
 
     <color name="ripple">#3A3A3A</color>
 
-    <color name="icActive">#FFFFFFFF</color>
-    <color name="icFocused">#DDFFFFFF</color>
-    <color name="icPressed">#AAFFFFFF</color>
+
+    <color name="application_background">#5B675C</color> <!-- Light Green Background -->
+    <color name="red">#D32F2F</color>                  <!-- Standard Error Red -->
+    <color name="bright_red">#F44336</color>           <!-- Bright Warning Red -->
+    <color name="dark_red">#B71C1C</color>             <!-- Darker Critical Red -->
+    <color name="grey">#BDBDBD</color>                 <!-- Light Grey -->
+    <color name="dark_grey">#616161</color>            <!-- Dark Grey -->
+    <color name="transparent">#00FFFFFF</color>        <!-- Fully Transparent White -->
+
+    <color name="light_blue">#264B28</color>           <!-- Soft Green (used in buttons) -->
+    <color name="dark_blue">#388E3C</color>            <!-- Dark Green (primary brand color) -->
+
+    <!-- Replace drawable with proper color if using in color contexts -->
+    <color name="transparent_background">#00000000</color> <!-- Fully Transparent -->
 
 </resources>

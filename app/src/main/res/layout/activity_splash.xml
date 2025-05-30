@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".activities.SplashActivity">
+    android:background="@drawable/background_color"
+    tools:context=".SplashActivity">
 
 
     <ImageView
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/ic_launcher_foreground" />
+        android:src="@drawable/expenzo" />
 
 </RelativeLayout>

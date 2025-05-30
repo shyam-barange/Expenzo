@@ -1,4 +1,4 @@
-package com.twinstech.expenzo.activities;
+package com.twinstech.expenzo;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.twinstech.expenzo.R;
+import com.twinstech.expenzo.activity.MainActivity;
 
 
 public class SplashActivity extends AppCompatActivity {
